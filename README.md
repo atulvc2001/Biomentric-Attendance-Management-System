@@ -1,2 +1,2 @@
 # MiniProject2022
-A small project based on Python
+An biometric attendance based project built on python
