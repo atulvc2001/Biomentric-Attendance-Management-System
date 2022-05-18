@@ -1,2 +1,2 @@
-# MiniProject2022
-An biometric attendance based project built on python frameworks, database sql and CVS image processing
+# BIOMETRIC ATTENDANCE MANAGEMENT SYSTEM
+An system built on python frameworks, database sql and CVS image processing
