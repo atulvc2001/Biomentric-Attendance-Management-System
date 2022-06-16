@@ -1,2 +1,2 @@
 # BIOMETRIC ATTENDANCE MANAGEMENT SYSTEM
-An system built on python frameworks like django, database sql and React for front end.
+A biometric attendance system built on python frameworks like django, database sql and React for front end.
