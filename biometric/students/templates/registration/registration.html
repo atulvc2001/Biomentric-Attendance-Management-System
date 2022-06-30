@@ -16,8 +16,26 @@
     <form action="POST">
         <tr>
             <td>Name</td>
-            <td><input type="text" placeholder="Please enter your full name..." name="uname"></td>
+            <td><input type="text" placeholder="Please enter your full name..." name="uname" required></td>
         </tr>
+        <tr>
+            <td>CMRIT USN</td>
+            <td><input type="text" placeholder="Please enter your USN..." name="usn" required></td>
+        </tr>
+        <tr>
+            <td>Unique ID</td>
+            <td><input type="number" placeholder="Please enter your Unique ID..." name="uid" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" placeholder="Please enter your full name..." name="pwd" required
+                    onchange="form.repwd.pattern=this.value"></td>
+        </tr>
+        <tr>
+            <td>Re-Password</td>
+            <td><input type="text" placeholder="Please enter your full name..." name="repwd"></td>
+        </tr>
+
 
     </form>
 </body>
