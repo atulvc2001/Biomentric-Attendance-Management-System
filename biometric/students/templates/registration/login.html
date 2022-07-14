@@ -1,6 +1,28 @@
 <h2>Log In</h2>
-<form method="post">
+<br>
+<form action="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log In</button>
+    <table border="1">
+        <tr>
+            <td>
+                Email name
+            </td>
+            <td>
+                <input type="text" placeholder="Enter you Email..." name="Email" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password
+            </td>
+            <td>
+                <input type="password" placeholder="Enter password..." name="Pwd" required>
+            </td>
+        <tr>
+            <td>
+                <button type="submit">Login</button>
+            </td>
+        </tr>
+        </tr>
+    </table>
 </form>

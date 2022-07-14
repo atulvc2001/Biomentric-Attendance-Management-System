@@ -3,18 +3,21 @@ from .models import stud_db_dest
 from django.http import HttpResponse
 from django.contrib import messages
 # Create your views here.
- 
 
-    def Userregistration(request):
-        if request.method=="POST":
-            if request.POST.get("uname") and request.POST.get("usn") and request.POST.get("uid") and request.POST.get("pwd"):
-                saverecord = Userreg()
-                saverecord.uname = request.POST.get('uname')
-                saverecord.uname = request.POST.get('usn')
-                saverecord.uname = request.POST.get('usn')
-                saverecord.uname = request.POST.get('pwd')
-                saverecord.save()
-                messages.success(request, "New User registration details has been saved successfully...!")
-                return render(request,'registration.html')
-        else:
-                return render(request,'registration.html')
+def Indexpage(request):
+    return render(request, 'Index.html')
+
+def Userreg(request):
+    if request.method=="POST":
+        Username=request.POST['uname']
+        usn=request.POST['usn']
+        uid=request.POST['uid']
+        Pwd=request.POST['pwd']
+        stud_db_dest(name=Username,cmritUSN=usn,UniqID=uid,Pwd=Pwd).save()
+        messages.success(request,'The new User '+request.POST['Username']+" is saved Successfully...!")
+        return render(request,'registration.html')
+    else:
+        return render(request,'registration.html')
+
+def loginpage(request):
+    if request.method=="POST":
