@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>New User Registration Form</h1>
+    <hr>
+
+    <form action="POST">
+        {% csrf_token %}
+
+        <table border="1">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" placeholder="Please enter your full name..." name="uname" required></td>
+            </tr>
+            <tr>
+                <td>CMRIT USN</td>
+                <td><input type="text" placeholder="Please enter your USN..." name="usn" required></td>
+            </tr>
+            <tr>
+                <td>Unique ID</td>
+                <td><input type="number" placeholder="Please enter your Unique ID..." name="uid" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" placeholder="Please enter your full name..." name="pwd" required
+                        onchange="form.repwd.pattern=this.value"></td>
+            </tr>
+            
+        </table>
+        {% if messages %}
+        {% for msg in messages %}
+        <b>{{msg}}</b>
+        {% endfor %}
+        {% endif %}
+        <br>
+        <em>If you are already a member <a href=""></a></em>
+    </form>
+</body>
+
+
+</html>
