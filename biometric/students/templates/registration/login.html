@@ -5,10 +5,10 @@
     <table border="1">
         <tr>
             <td>
-                Email name
+                USN
             </td>
             <td>
-                <input type="text" placeholder="Enter you Email..." name="Email" required>
+                <input type="text" placeholder="Enter you Email..." name="usn" required>
             </td>
         </tr>
         <tr>
@@ -22,7 +22,11 @@
             <td>
                 <button type="submit">Login</button>
             </td>
-        </tr>
-        </tr>
+        
     </table>
+    {% if messages %}
+    {% for msg in messages %}
+    <b>{{msg}}</b>
+    {% endfor %}
+    {% endif %}
 </form>

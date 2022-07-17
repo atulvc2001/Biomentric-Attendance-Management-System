@@ -9,9 +9,8 @@
 </head>
 
 <body>
-    <title>REGISTRATION FORM</title>
 
-    <h1>Please enter your details</h1>
+    <h1>New User Registration Form</h1>
     <hr>
 
     <form action="POST">
@@ -35,13 +34,15 @@
                 <td><input type="text" placeholder="Please enter your full name..." name="pwd" required
                         onchange="form.repwd.pattern=this.value"></td>
             </tr>
-            <tr>
-                <td>Re-Password</td>
-                <td><input type="text" placeholder="Please enter your full name..." name="repwd"></td>
-            </tr>
-
+            
         </table>
-
+        {% if messages %}
+        {% for msg in messages %}
+        <b>{{msg}}</b>
+        {% endfor %}
+        {% endif %}
+        <br>
+        <em>If you are already a member <a href=""></a></em>
     </form>
 </body>
 
